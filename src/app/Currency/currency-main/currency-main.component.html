@@ -1,0 +1,26 @@
+<app-currency-panel 
+ [isHiddenMoreDetailsBtn]="isHiddenMoreDetailsBtn"
+ [isDisabledFromDropDown]="isDisabledFromDropDown"
+ [selectedFromVal]="selectedFromVal"
+ [selectedToVal]="selectedToVal"
+ (convertedValuesArr)="getConvertedCurrencyArr($event)"
+ 
+ ></app-currency-panel>
+
+<div class="pd-15">
+    <mat-grid-list cols="3" rowHeight="150px">
+        <mat-grid-tile *ngFor="let obj of convertedCurrenciesGrid" [style.background]="'#DDBDF1'">
+            <div class="flex-container">
+                <div class="row">
+                    <div class="flex-item">
+                        <h2 style="color: #fff;"> {{obj.convertedMsgOfOneUnit}} </h2>
+                    </div>
+                    <div class="flex-item">
+                        <h3 style="color: #fff;"> {{obj.convertedAmountMsg}} </h3>
+                    </div>
+                </div >
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+

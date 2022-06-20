@@ -1,0 +1,9 @@
+<div class="header">
+    <a [routerLink]="['/app/currency']" class="logo">LOGO</a>
+    <div class="header-right">
+      <a  [routerLink]="['/app/currency/currency-details',fromCurrencyVal,toCurrencyVal,amountVal]" 
+      [ngClass]="{ 'active' : isValue == 1 }" (click)="toggle(1)"  style="margin-right: 10px;"> {{fromCurrencyVal}} - {{toCurrencyVal}} Details </a>
+      <a [routerLink]="['/app/currency/currency-details',toCurrencyVal,fromCurrencyVal,amountVal]" 
+      [ngClass]="{ 'active' : isValue == 2 }" (click)="toggle(2)">{{toCurrencyVal}} - {{fromCurrencyVal}} Details</a>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!-- <p>currency-details works!</p> -->
+<div class="main-div">
+    <div class="row">
+        <div class="col-lg-6" >
+         <p class="left">{{selectedFromVal}}</p>  
+        </div>
+        <div class="col-lg-6">
+            <span class="align-right">
+                <a class="button" routerLink="/app/currency"> Back To Home</a>
+            </span>
+       </div>
+       </div>
+</div>
+
+<app-currency-panel 
+ [isHiddenMoreDetailsBtn]="isHiddenMoreDetailsBtn"
+ [isDisabledFromDropDown]="isDisabledFromDropDown"
+ [selectedFromVal]="selectedFromVal"
+ [selectedToVal]="selectedToVal"
+ [selectedAmtToFrmData]="selectedAmtToFrmDataArr"
+ (chartData)="chartDataEventFun($event)"
+ [toDropDownEventEnabled] ="toDropDownEventEnabled"
+ >
+</app-currency-panel>
+
+<div class="highChartClass">
+    <highchart-temp *ngIf="showHighchart" [config]="config"></highchart-temp>
+    </div>
+

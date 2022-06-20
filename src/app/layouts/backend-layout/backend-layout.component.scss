@@ -1,0 +1,28 @@
+.wrapper,.wrapper-box {
+  // height: 100vh;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 400px) {
+  .side-nav-height {
+    position: relative;
+    width: 100%;
+  }
+  
+  .sideNavHide {
+    display: none;
+  }
+  .sideNavShow {
+    display: block;
+  }
+
+  .mainContent {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+.sideNavHide, .sideNavShow {
+  display: block;
+}
+
+}
